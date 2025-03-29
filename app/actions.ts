@@ -52,7 +52,7 @@ export async function createOrder(data: CheckoutFormValues) {
 				phone: data.phone,
 				address: data.address,
 				comment: data.comment,
-				totalAmount: userCart.totalAmount + 250,
+				totalAmount: userCart.totalAmount,
 				status: OrderStatus.PENDING,
 				products: JSON.stringify(userCart.items),
 				userId: userId,
