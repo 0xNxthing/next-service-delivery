@@ -52,7 +52,7 @@ export async function createOrder(data: CheckoutFormValues) {
 				phone: data.phone,
 				address: data.address,
 				comment: data.comment,
-				totalAmount: userCart.totalAmount,
+				totalAmount: userCart.totalAmount + 250,
 				status: OrderStatus.PENDING,
 				products: JSON.stringify(userCart.items),
 				userId: userId,
@@ -75,7 +75,7 @@ export async function createOrder(data: CheckoutFormValues) {
 		});
 
 		const paymentData = await createPayment({
-			amount: order.totalAmount + 250,
+			amount: order.totalAmount,
 			orderId: order.id,
 			description: 'Оплата заказа №' + order.id,
 		});
