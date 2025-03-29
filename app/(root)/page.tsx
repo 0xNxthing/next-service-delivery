@@ -12,7 +12,7 @@ interface PageProps {
 
 export default async function Home({ searchParams }: PageProps) {
 	const categories = await findProducts(searchParams);
-
+	//
 	return (
 		<>
 			<Container className="my-10">
