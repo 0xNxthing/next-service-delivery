@@ -6,8 +6,8 @@ import { TopBar } from '@/components/shared/top-bar';
 import { findProducts, GetSearchParams } from '@/lib/find-products';
 import { Suspense } from 'react';
 
-interface PageProps<T = Record<string, string>> {
-	searchParams: GetSearchParams;
+interface PageProps {
+	searchParams: Record<string, string | string[] | undefined>;
 }
 
 export default async function Home({ searchParams }: PageProps) {
