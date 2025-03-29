@@ -7,7 +7,7 @@ import { findProducts, GetSearchParams } from '@/lib/find-products';
 import { Suspense } from 'react';
 
 interface PageProps {
-	searchParams: Record<string, string | string[] | undefined>;
+	searchParams: GetSearchParams;
 }
 
 export default async function Home({ searchParams }: PageProps) {
