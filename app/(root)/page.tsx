@@ -7,17 +7,11 @@ import { findProducts, GetSearchParams } from '@/lib/find-products';
 import { Suspense } from 'react';
 
 interface PageProps {
-	searchParams: GetSearchParams; // Оставляем твой интерфейс GetSearchParams
+	searchParams: GetSearchParams;
 }
 
 export default async function Home({ searchParams }: PageProps) {
-	const categories = await findProducts({
-		query: searchParams.query,
-		sortBy: searchParams.sortBy,
-		ingredients: searchParams.ingredients,
-		priceFrom: searchParams.priceFrom ? Number(searchParams.priceFrom) : undefined,
-		priceTo: searchParams.priceTo ? Number(searchParams.priceTo) : undefined,
-	});
+	const categories = await findProducts(searchParams);
 
 	return (
 		<>
