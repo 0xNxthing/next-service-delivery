@@ -2,9 +2,10 @@ import { updateCartTotalAmount } from '@/lib/update-cart-total-amount';
 import prisma from '@/prisma/prisma-client';
 import { NextRequest, NextResponse } from 'next/server';
 
-// Убираем пользовательский интерфейс Params и полагаемся на вывод типов Next.js
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+// Убираем явное указание типа для второго аргумента
+export async function PATCH(req: NextRequest, context) {
 	try {
+		const { params } = context;
 		const id = Number(params.id);
 		const data = (await req.json()) as { quantity: number };
 		const token = req.cookies.get('cartToken')?.value;
@@ -40,8 +41,10 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
 	}
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+// Убираем явное указание типа для второго аргумента
+export async function DELETE(req: NextRequest, context) {
 	try {
+		const { params } = context; // Деструктурируем params из context
 		const id = Number(params.id);
 		const token = req.cookies.get('cartToken')?.value;
 
