@@ -2,7 +2,12 @@ import { updateCartTotalAmount } from '@/lib/update-cart-total-amount';
 import prisma from '@/prisma/prisma-client';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+// Тип для параметров маршрута
+interface Params {
+	params: { id: string };
+}
+
+export async function PATCH(req: NextRequest, { params }: Params) {
 	try {
 		const id = Number(params.id);
 		const data = (await req.json()) as { quantity: number };
@@ -35,10 +40,11 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
 		return NextResponse.json(updatedUserCart);
 	} catch (error) {
 		console.log(error);
+		return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
 	}
 }
 
-export async function DELETE(req: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(req: NextRequest, { params }: Params) {
 	try {
 		const id = Number(params.id);
 		const token = req.cookies.get('cartToken')?.value;
@@ -67,5 +73,6 @@ export async function DELETE(req: NextRequest, { params }: { params: { id: strin
 		return NextResponse.json(updatedUserCart);
 	} catch (error) {
 		console.log(error);
+		return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
 	}
 }
