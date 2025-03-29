@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { RefObject } from 'react';
 import { useIntersection } from 'react-use';
 import { Title, ProductCard } from '@/components/shared';
 import { cn } from '@/lib/utils';
@@ -22,8 +22,8 @@ export const ProductsGroupList: React.FC<Props> = ({
 	className,
 }) => {
 	const setActiveCategoryId = useCategoryStore((state) => state.setActiveId);
-	const intersectionRef = React.useRef(null);
-	const intersection = useIntersection(intersectionRef, {
+	const intersectionRef = React.useRef<HTMLDivElement>(null);
+	const intersection = useIntersection(intersectionRef as RefObject<HTMLElement>, {
 		threshold: 0.8,
 	});
 
