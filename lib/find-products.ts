@@ -4,8 +4,8 @@ export interface GetSearchParams {
 	query?: string;
 	sortBy?: string;
 	ingredients?: string;
-	priceFrom?: number;
-	priceTo?: number;
+	priceFrom?: string;
+	priceTo?: string;
 }
 
 const DEFAULT_MIN_PRICE = 0;

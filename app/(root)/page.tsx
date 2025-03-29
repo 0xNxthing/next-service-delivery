@@ -6,13 +6,8 @@ import { TopBar } from '@/components/shared/top-bar';
 import { findProducts, GetSearchParams } from '@/lib/find-products';
 import { Suspense } from 'react';
 
-interface PageProps {
-	searchParams: GetSearchParams;
-}
-
-export default async function Home({ searchParams }: PageProps) {
+export default async function Home({ searchParams }: { searchParams: GetSearchParams }) {
 	const categories = await findProducts(searchParams);
-	//
 	return (
 		<>
 			<Container className="my-10">
