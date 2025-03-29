@@ -6,12 +6,20 @@ import { TopBar } from '@/components/shared/top-bar';
 import { findProducts, GetSearchParams } from '@/lib/find-products';
 import { Suspense } from 'react';
 
-interface PageProps {
-	searchParams: GetSearchParams;
-}
+export default async function Home({
+	searchParams,
+}: {
+	searchParams: Record<string, string | string[] | undefined>;
+}) {
+	const params: GetSearchParams = {
+		query: searchParams.query as string,
+		sortBy: searchParams.sortBy as string,
+		ingredients: searchParams.ingredients as string,
+		priceFrom: searchParams.priceFrom ? Number(searchParams.priceFrom) : undefined,
+		priceTo: searchParams.priceTo ? Number(searchParams.priceTo) : undefined,
+	};
 
-export default async function Home({ searchParams }: PageProps) {
-	const categories = await findProducts(searchParams);
+	const categories = await findProducts(params);
 
 	return (
 		<>
