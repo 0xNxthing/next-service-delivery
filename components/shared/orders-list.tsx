@@ -49,8 +49,8 @@ export const OrdersList: React.FC = () => {
 							{order.status === 'PENDING'
 								? 'Ожидает оплаты'
 								: order.status === 'SUCCEEDED'
-								? 'Оплачен'
-								: 'Отменен'}
+									? 'Оплачен'
+									: 'Отменен'}
 						</p>
 						<p>
 							<strong>Адрес:</strong> {order.address}
@@ -72,7 +72,7 @@ export const OrdersList: React.FC = () => {
 							</ul>
 						</div>
 						<p>
-							<strong>Сумма:</strong> {order.totalAmount + 250} ₽
+							<strong>Сумма:</strong> {order.totalAmount} ₽
 						</p>
 					</div>
 				))}
