@@ -12,7 +12,7 @@ export default async function ProductModalPage({ params }: PageProps<{ id: strin
 			ingredients: true,
 		},
 	});
-
+	//
 	if (!product) {
 		return notFound();
 	}
