@@ -32,19 +32,19 @@ export const ChooseProductForm: React.FC<Props> = ({
 				className="h-[250px] my-auto mx-auto transition-all z-10 duration-300 object-cover py-auto drop-shadow-lg"
 			/>
 
-			<div className="flex flex-col justify-between w=[490px] h-[550px] p-7 bg-[#ffffff]">
+			<div className="flex flex-col justify-between w=[490px] h-full p-4 lg:p-7 bg-[#ffffff]">
 				<div>
 					<Title text={name} size="md" className="font-extrabold mb-3" />
 
 					<p className="text-gray-500 mb-4">{description}</p>
 
-					<p className="text-gray-500">{structure}</p>
+					<p className="text-gray-500 hidden sm:block">{structure}</p>
 				</div>
 
 				<Button
 					loading={loading}
 					onClick={() => onSubmit?.()}
-					className="h-[55px] px-10 text-base rounded-[18px] w-full mt-10">
+					className="h-[55px] px-10 text-base rounded-[18px] w-full mt-3 ">
 					Добавить в корзину за {price} ₽
 				</Button>
 			</div>
