@@ -32,7 +32,7 @@ export const OrdersList: React.FC = () => {
 	}
 
 	return (
-		<div className="container mx-auto py-10">
+		<div className="container lg:mx-auto py-10 w-96 lg:w-full">
 			<Title text="Ваши заказы" size="md" className="font-bold mb-5" />
 			<div className="grid gap-6">
 				{orders.map((order) => (

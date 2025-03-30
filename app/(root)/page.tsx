@@ -11,13 +11,13 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
 
 	return (
 		<>
-			<Container className="my-10">
+			<Container className="my-10 px-5 xl:px-0">
 				<Title text="Каталог" size="lg" className="font-extrabold mb-5" />
 			</Container>
 
 			<TopBar categories={categories.filter((category) => category.products.length > 0)} />
 
-			<Container className="py-10 flex gap-[70px]">
+			<Container className="py-10 flex gap-[70px] px-8 lg:px-5 xl:px-0">
 				<div className="flex-1">
 					<div className="flex flex-col gap-16">
 						{categories.map(
@@ -36,7 +36,7 @@ export default async function Home({ searchParams }: { searchParams: GetSearchPa
 
 				<div className="w-[180px]">
 					<Suspense>
-						<Filters className="sticky top-0" />
+						<Filters className="sticky top-0 hidden sm:block" />
 					</Suspense>
 				</div>
 			</Container>

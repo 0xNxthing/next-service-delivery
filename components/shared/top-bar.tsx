@@ -27,8 +27,9 @@ export const TopBar: React.FC<Props> = ({ categories, className }) => {
 	}, []);
 
 	return (
-		<div className={cn('sticky top-0 bg-white py-2 z-10', isScrolled && 'shadow-sm', className)}>
-			<Container className="flex items-center justify-between">
+		<div
+			className={cn('sticky top-0 bg-white py-2 z-10 px-5', isScrolled && 'shadow-sm', className)}>
+			<Container className="flex items-end justify-between">
 				<Categories items={categories} />
 				<CartButton />
 			</Container>

@@ -12,12 +12,11 @@ interface Props {
 }
 
 export const CartButton: React.FC<Props> = ({ className }) => {
-	const totalAmount = useCartStore((state) => state.totalAmount);
 	const items = useCartStore((state) => state.items);
 
 	return (
 		<CartDrawer>
-			<Button className={cn('group relative w-[182px]', className)}>
+			<Button className={cn('group relative w-[182px] my-auto', className)}>
 				<b className="text-[16px]">Корзина</b>
 				<span className="h-full w-[1px] bg-white/30 mx-3" />
 				<div className="flex items-center gap-1 transition duration-300 group-hover:opacity-0">

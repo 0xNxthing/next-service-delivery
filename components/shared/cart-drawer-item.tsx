@@ -25,7 +25,7 @@ export const CartDrawerItem: React.FC<Props> = ({
 }) => {
 	return (
 		<div className={cn('flex bg-white mb-4 p-5 gap-5', className)}>
-			<img className="h-[80px] py-auto" src={imageUrl} alt="Undefined" />
+			<img className="h-[60px] sm:h-[80px] py-auto" src={imageUrl} alt="Undefined" />
 
 			<div className="flex-1">
 				<div className="flex flex-1 items-center justify-between">
@@ -33,9 +33,9 @@ export const CartDrawerItem: React.FC<Props> = ({
 				</div>
 				<hr className="my-4" />
 				<div className="flex items-center justify-between">
-					<CountButton onClick={onClickCountButton} value={quantity} />
+					<CountButton className="mr-4" onClick={onClickCountButton} value={quantity} />
 					<div className="flex items-center gap-3">
-						<h2 className={cn('font-bold', className)}>{price} ₽</h2>
+						<h2 className={cn('font-bold ', className)}>{price} ₽</h2>
 						<Trash2Icon
 							onClick={onClickRemoveButton}
 							className="text-gray-400 cursor-pointer hover:text-gray-600"

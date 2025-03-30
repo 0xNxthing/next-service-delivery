@@ -42,7 +42,11 @@ export const ProductCard: React.FC<Props> = ({
 	};
 
 	return (
-		<div className={cn('h-[490px] flex flex-col mb-8', className)}>
+		<div
+			className={cn(
+				'h-[490px] min-w-[350px] max-w-[350px] 2xl:min-w-[330px] 2xl:max-w-[330px] flex flex-col mb-8',
+				className,
+			)}>
 			<Link href={`/product/${id}`} className="flex flex-col h-full">
 				<div className="flex justify-center bg-secondary rounded-lg h-[260px]">
 					<img src={imageUrl} alt="Logo" className="h-[200px] object-cover mt-7 drop-shadow-lg" />

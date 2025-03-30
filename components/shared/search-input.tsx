@@ -79,7 +79,7 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
 									alt={product.name}
 								/>
 								<span>{product.name}</span>
-								<span className="text-gray-400 pl-1">{product.price} ₽</span>
+								<span className="text-gray-400 pl-1 hidden lg:block">{product.price} ₽</span>
 							</Link>
 						))}
 					</div>

@@ -25,7 +25,11 @@ export const CheckoutBlock: React.FC<React.PropsWithChildren<Props>> = ({
 				</div>
 			)}
 
-			<div className={cn('px-5 py-4', contentClassName)}>{children}</div>
+			{title === '1. Корзина' ? (
+				<div className={cn('px-0 py-4', contentClassName)}>{children}</div>
+			) : (
+				<div className={cn('px-5 py-4', contentClassName)}>{children}</div>
+			)}
 		</div>
 	);
 };

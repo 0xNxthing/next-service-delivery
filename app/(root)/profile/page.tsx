@@ -23,7 +23,7 @@ export default async function ProfilePage() {
 	}
 
 	return (
-		<Container className="flex gap-[125px]">
+		<Container className="flex flex-col lg:flex-row gap-[20px] lg:gap-[125px] px-5 xl:px-0">
 			<ProfileForm data={user} />
 			<OrdersList />
 		</Container>

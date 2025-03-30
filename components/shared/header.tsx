@@ -27,7 +27,7 @@ export const Header: React.FC<Props> = ({ hasSearch = true, className }) => {
 
 	return (
 		<header className={cn('border-b', className)}>
-			<Container className="flex items-center justify-between py-8">
+			<Container className="flex items-center justify-between py-8 px-5 xl:px-0">
 				<Link href="/">
 					<div className="flex items-center gap-4">
 						<Image src={'/logo.png'} alt="logo" width={35} height={35} className=""></Image>
@@ -39,7 +39,7 @@ export const Header: React.FC<Props> = ({ hasSearch = true, className }) => {
 				</Link>
 
 				{hasSearch && (
-					<div className="mx-10 flex-1">
+					<div className="mx-10 flex-1 hidden md:block">
 						<SearchInput />
 					</div>
 				)}

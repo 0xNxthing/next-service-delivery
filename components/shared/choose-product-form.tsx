@@ -25,11 +25,11 @@ export const ChooseProductForm: React.FC<Props> = ({
 	loading,
 }) => {
 	return (
-		<div className={cn('flex flex-1 bg-secondary', className)}>
+		<div className={cn('flex flex-col lg:flex-row flex-1 bg-secondary', className)}>
 			<img
 				src={imageUrl}
 				alt={name}
-				className="h-[340px] my-auto relative left-2 top-2 transition-all z-10 duration-300 object-cover py-auto drop-shadow-lg"
+				className="h-[250px] my-auto mx-auto transition-all z-10 duration-300 object-cover py-auto drop-shadow-lg"
 			/>
 
 			<div className="flex flex-col justify-between w=[490px] h-[550px] p-7 bg-[#ffffff]">

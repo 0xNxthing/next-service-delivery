@@ -70,15 +70,15 @@ export default function CheckoutPage() {
 	};
 
 	return (
-		<Container className="mt-10">
+		<Container className="mt-10 px-5 xl:px-0">
 			<Title className="font-extrabold mb-8 text-[36px]" text="Оформление заказа" />
 
 			<FormProvider {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)}>
-					<div className="flex gap-10">
+					<div className="flex flex-col xl:flex-row gap-10">
 						<div className="flex flex-col gap-10 flex-1 mb-16">
 							<CheckoutBlock title="1. Корзина">
-								<div className="flex flex-col gap-4 min-h-[80px]">
+								<div className="flex flex-col justify-center gap-4 min-h-[80px] ">
 									{items.map((item) => (
 										<CheckoutItem
 											key={item.id}
@@ -105,7 +105,7 @@ export default function CheckoutPage() {
 							</CheckoutBlock>
 						</div>
 
-						<div className="w-[450px]">
+						<div className="">
 							<CheckoutSidebar totalAmount={totalAmount} loading={loading} />
 						</div>
 					</div>

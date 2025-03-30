@@ -24,10 +24,10 @@ export const CheckoutItem: React.FC<Props> = ({
 	className,
 }) => {
 	return (
-		<div className={cn('flex items-center justify-between mr-4', className)}>
-			<img className="h-[80px] py-auto" src={imageUrl} alt="Undefined" />
-			<h2 className="text-lg font-bold flex-1 leading-6">{name}</h2>
-			<div className="flex items-center justify-between gap-8">
+		<div className={cn('flex items-center justify-between sm:mr-4', className)}>
+			<img className="h-[60px] sm:h-[80px] py-auto" src={imageUrl} alt="Undefined" />
+			<h2 className="text-sm sm:text-lg font-bold flex-1 leading-6">{name}</h2>
+			<div className="flex items-center justify-between gap-1 sm:gap-8">
 				<h2 className={cn('font-bold', className)}>{price} ₽</h2>
 				<CountButton onClick={onClickCountButton} value={quantity} />
 				<button type="button" onClick={onClickRemoveButton}>
