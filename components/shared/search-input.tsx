@@ -43,7 +43,9 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
 
 	return (
 		<>
-			{focused && <div className="fixed top-0 left-0 bottom-0 right-0 bg-black/50 z-30" />}
+			{focused && (
+				<div className="fixed top-0 left-0 bottom-0 right-0 bg-black/50 backdrop-blur-[2px] z-30" />
+			)}
 
 			<div
 				ref={ref}

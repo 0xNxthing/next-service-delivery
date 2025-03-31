@@ -28,7 +28,11 @@ export const TopBar: React.FC<Props> = ({ categories, className }) => {
 
 	return (
 		<div
-			className={cn('sticky top-0 bg-white py-2 z-10 px-5', isScrolled && 'shadow-sm', className)}>
+			className={cn(
+				'sticky top-0 bg-white py-2 z-10 px-5 backdrop-blur-xl bg-(rgba(0, 0, 0, 5))',
+				isScrolled && 'shadow-sm',
+				className,
+			)}>
 			<Container className="flex items-end justify-between">
 				<Categories items={categories} />
 				<CartButton />
