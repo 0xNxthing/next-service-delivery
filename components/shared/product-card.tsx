@@ -44,7 +44,7 @@ export const ProductCard: React.FC<Props> = ({
 	return (
 		<div
 			className={cn(
-				'h-[490px] min-w-[350px] max-w-[350px] 2xl:min-w-[330px] 2xl:max-w-[330px] flex flex-col mb-8',
+				'h-[490px] min-w-[350px] max-w-[350px] 2xl:min-w-[100%] 2xl:max-w-[100%] flex flex-col mb-8',
 				className,
 			)}>
 			<Link href={`/product/${id}`} className="flex flex-col h-full">

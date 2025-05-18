@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-	title: 'Berry Cake - Delivery',
-	description: 'Berry Cake - Online service for confectionery orders',
+	title: 'Plateria - Delivery',
+	description: 'Plateria - Online service for food delivery',
 };
 
 export default function HomeLayout({

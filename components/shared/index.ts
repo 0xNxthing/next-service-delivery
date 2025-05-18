@@ -1,12 +1,9 @@
-export { CheckboxFiltersGroup } from './checkbox-filters-group';
 export { SearchInput } from './search-input';
 export { Container } from './container';
 export { Header } from './header';
 export { Title } from './title';
 export { Categories } from './categories';
 export { TopBar } from './top-bar';
-export { Filters } from './filters';
-export { FilterCheckbox } from './filter-checkbox';
 export { ProductCard } from './product-card';
 export { CartButton } from './cart-button';
 export { CartDrawer } from './cart-drawer';

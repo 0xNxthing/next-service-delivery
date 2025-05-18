@@ -22,10 +22,10 @@ html {
 		--popover: 0 0% 100%;
 		--popover-foreground: 20 14.3% 4.1%;
 
-		--primary: 24 40% 61%;
+		--primary: 354 70% 43%;
 		--primary-foreground: 60 9.1% 97.8%;
 
-		--secondary: 32 100% 98%;
+		--secondary: 354 100% 98.5%;
 		--secondary-foreground: 24 9.8% 10%;
 
 		--muted: 60 4.8% 95.9%;
@@ -39,7 +39,7 @@ html {
 
 		--border: 20 5.9% 90%;
 		--input: 0 0% 90%;
-		--ring: 24 40% 61%;
+		--ring: 354 70% 43%;
 		--radius: 1rem;
 	}
 }

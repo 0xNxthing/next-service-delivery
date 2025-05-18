@@ -29,7 +29,7 @@ export const ChooseProductForm: React.FC<Props> = ({
 			<img
 				src={imageUrl}
 				alt={name}
-				className="h-[250px] my-auto mx-auto transition-all z-10 duration-300 object-cover py-auto drop-shadow-lg"
+				className=" w-[450px] my-auto mx-auto transition-all z-10 duration-300 object-cover px-20 drop-shadow-lg"
 			/>
 
 			<div className="flex flex-col justify-between w=[490px] h-full p-4 lg:p-7 bg-[#ffffff]">

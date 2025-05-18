@@ -42,35 +42,15 @@ model Product {
   imageUrl    String
   price       Int
   description String
+  weight      String
   structure   String
   Category    Category @relation(fields: [categoryId], references: [id])
   categoryId  Int
 
   cartProduct CartProduct[]
 
-  ingredients ProductIngredient[]
-
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-}
-
-model Ingredient {
-  id       Int                 @id @default(autoincrement())
-  name     String
-  products ProductIngredient[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-
-model ProductIngredient {
-  productId    Int
-  ingredientId Int
-
-  product    Product    @relation(fields: [productId], references: [id])
-  ingredient Ingredient @relation(fields: [ingredientId], references: [id])
-
-  @@id([productId, ingredientId]) // Композитный первичный ключ
 }
 
 model Cart {

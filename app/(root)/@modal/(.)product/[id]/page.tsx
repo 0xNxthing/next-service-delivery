@@ -11,7 +11,6 @@ export default async function ProductModalPage(
 
 	const product = await prisma.product.findFirst({
 		where: { id: Number(params.id) },
-		include: { ingredients: true },
 	});
 
 	if (!product) return notFound();
